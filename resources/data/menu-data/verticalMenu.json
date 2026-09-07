@@ -1,0 +1,247 @@
+{
+  "menu": [
+    {
+      "url": "admin/",
+      "name": "Dashboard",
+      "icon": "<i data-feather='home'></i>",
+      "slug": "admin.home.index"
+    },
+    {
+      "name": "Analytics",
+      "icon": "<span class='material-symbols-outlined'>analytics</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/analytics/users",
+          "name": "User Analytics",
+          "icon": "circle",
+          "slug": "admin.analytics.users"
+        },
+        {
+          "url": "admin/analytics/revenue",
+          "name": "Revenue Analytics",
+          "icon": "circle",
+          "slug": "admin.analytics.revenue"
+        },
+        {
+          "url": "admin/analytics/astrologers",
+          "name": "Astrologer Analytics",
+          "icon": "circle",
+          "slug": "admin.analytics.astrologers"
+        },
+        {
+          "url": "admin/analytics/consultations",
+          "name": "Consultation Analytics",
+          "icon": "circle",
+          "slug": "admin.analytics.consultations"
+        },
+        {
+          "url": "admin/analytics/orders",
+          "name": "Order Analytics",
+          "icon": "circle",
+          "slug": "admin.analytics.orders"
+        }
+      ]
+    },
+    {
+      "url": "admin/users",
+      "name": "Users",
+      "icon": "<span class='material-symbols-outlined'>person</span>",
+      "slug": "admin.users.index"
+    },
+    {
+      "url": "admin/banners",
+      "name": "Banners",
+      "icon": "<span class='material-symbols-outlined'>panorama</span>",
+      "slug": "admin.banners.index"
+    },
+    {
+      "name": "Wallet Management",
+      "icon": "<span class='material-symbols-outlined'>account_balance_wallet</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/walletpackages",
+          "name": "Packages",
+          "icon": "circle",
+          "slug": "admin.walletpackages.index"
+        },
+        {
+          "url": "admin/wallettransactions",
+          "name": "Transactions",
+          "icon": "circle",
+          "slug": "admin.wallettransactions.index"
+        }
+      ]
+    },
+    {
+      "name": "Astro Management",
+      "icon": "<span class='material-symbols-outlined'>person</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/astros/create",
+          "name": "Add Astro",
+          "icon": "circle",
+          "slug": "admin.astros.create"
+        },
+        {
+          "url": "admin/astros",
+          "name": "Astros",
+          "icon": "circle",
+          "slug": "admin.astros.index"
+        }
+      ]
+    },
+    {
+      "name": "Product/Service Management",
+      "icon": "<span class='material-symbols-outlined'>inventory_2</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/categorys",
+          "name": "Categories",
+          "icon": "circle",
+          "slug": "admin.categorys.index"
+        },
+        {
+          "url": "admin/products",
+          "name": "Products/Services",
+          "icon": "circle",
+          "slug": "admin.products.index"
+        }
+      ]
+    },
+    {
+      "name": "Order Management",
+      "icon": "<span class='material-symbols-outlined'>shopping_cart</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/orders",
+          "name": "All",
+          "icon": "circle",
+          "slug": "admin.orders.all"
+        },
+        {
+          "url": "admin/orders/confirmed",
+          "name": "Confirmed",
+          "icon": "circle",
+          "slug": "admin.orders.confirmed"
+        },
+        {
+          "url": "admin/orders/shipped",
+          "name": "Shipped",
+          "icon": "circle",
+          "slug": "admin.orders.shipped"
+        },
+        {
+          "url": "admin/orders/delivered",
+          "name": "Delivered",
+          "icon": "circle",
+          "slug": "admin.orders.delivered"
+        }
+      ]
+    },
+    {
+      "name": "Astro Bookings",
+      "icon": "<span class='material-symbols-outlined'>planet</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/bookings",
+          "name": "All",
+          "icon": "circle",
+          "slug": "admin.bookings.all"
+        },
+        {
+          "url": "admin/bookings/confirmed",
+          "name": "Confirmed",
+          "icon": "circle",
+          "slug": "admin.bookings.confirmed"
+        },
+        {
+          "url": "admin/bookings/started",
+          "name": "Started",
+          "icon": "circle",
+          "slug": "admin.bookings.started"
+        },
+        {
+          "url": "admin/bookings/ended",
+          "name": "Ended",
+          "icon": "circle",
+          "slug": "admin.bookings.ended"
+        }
+      ]
+    },
+    {
+      "url": "admin/instant-consultation",
+      "name": "Instant Consultation History",
+      "icon": "<span class='material-symbols-outlined'>planet</span>",
+      "slug": "admin.instant-consultation.index"
+    },
+    {
+      "name": "Business Settings",
+      "icon": "<span class='material-symbols-outlined'>account_balance_wallet</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/business-settings",
+          "name": "Business Settings",
+          "icon": "circle",
+          "slug": "admin.business-settings.index"
+        },
+        {
+          "url": "admin/astro-business-settings",
+          "name": "Astro Business Settings",
+          "icon": "circle",
+          "slug": "admin.astro-business-settings.index"
+        }
+      ]
+    },
+    {
+      "name": "Master Data",
+      "icon": "<span class='material-symbols-outlined'>account_balance_wallet</span>",
+      "slug": "",
+      "submenu": [
+        {
+          "url": "admin/services",
+          "name": "Services",
+          "icon": "<span class='material-symbols-outlined'>auto_awesome</span>",
+          "slug": "admin.services.index"
+        },
+        {
+          "url": "admin/skills",
+          "name": "Skills",
+          "icon": "<span class='material-symbols-outlined'>auto_awesome</span>",
+          "slug": "admin.skills.index"
+        },
+        {
+          "url": "admin/languages",
+          "name": "Languages",
+          "icon": "<span class='material-symbols-outlined'>panorama</span>",
+          "slug": "admin.languages.index"
+        }
+      ]
+    },
+    {
+      "url": "admin/notifications",
+      "name": "Notification",
+      "icon": "<span class='material-symbols-outlined'>list_alt</span>",
+      "slug": "admin.notifications.index",
+      "guard": "admin"
+    },
+    {
+      "url": "admin/promocodes",
+      "name": "Promocode",
+      "icon": "<span class='material-symbols-outlined'>panorama</span>",
+      "slug": "admin.promocodes.index"
+    },
+    {
+      "url": "admin/astro-time-report",
+      "name": "Astro Time Report",
+      "icon": "<span class='material-symbols-outlined'>schedule</span>",
+      "slug": "admin.astro-time-report.index"
+    }
+  ]
+}

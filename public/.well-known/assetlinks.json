@@ -1,0 +1,15 @@
+[
+    {
+      "relation": [
+        "delegate_permission/common.handle_all_urls",
+        "delegate_permission/common.get_login_creds"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.karmatalks.user",
+        "sha256_cert_fingerprints": [
+          "3D:B6:F3:5D:9A:61:84:C8:2A:A7:F8:72:B8:C4:7C:03:CE:1D:AB:8D:FF:27:E7:D2:BB:67:F3:C2:8A:5F:FA:9C"
+        ]
+      }
+    }
+  ]

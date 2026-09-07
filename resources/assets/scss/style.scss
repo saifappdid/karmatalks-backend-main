@@ -1,0 +1,325 @@
+$primary-color: #2b9fb8;
+.my-video {
+  height: 100%;
+  width: 100%;
+}
+.s-image {
+  max-width: 100%;
+}
+.chat-app-window .chats .chat-body .chat-content {
+  max-width: 50% !important;
+}
+.chat-image {
+  min-width: 20rem;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.chat-app-window .chats .chat-body .chat-content.has-image p {
+  margin-top: 10px;
+}
+.chat-app-window .chats .chat-body .chat-content p {
+  overflow-wrap: anywhere;
+}
+.chat-time {
+  float: right;
+}
+p.empty-chat {
+  text-align: center;
+  margin-top: 25%;
+}
+#message-clone {
+  margin-right: 20px;
+}
+#frames {
+  min-height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clone-img {
+  all: unset;
+  width: 20rem;
+  height: fit-content;
+  border-radius: 5px;
+}
+.chat-time {
+  font-size: xx-small;
+}
+.og-time {
+  display: none;
+}
+
+.imagePreview {
+  width: 100%;
+  min-height: 180px;
+  background-position: center;
+  background: url(/images/placeHolder.jpg);
+  background-color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center;
+  max-height: 150px;
+  vertical-align: middle;
+  object-fit: cover;
+  white-space: nowrap;
+}
+
+.imgUp {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.del {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.dark-layout {
+  div.dataTables_wrapper .dt-button-collection {
+    background-color: #283046;
+  }
+}
+div.dataTables_wrapper .dt-button-collection {
+  padding: 2px;
+}
+
+.delete {
+  .loader {
+    position: relative;
+    background: #ea5455;
+    width: 80px;
+    height: 30px;
+    line-height: 18px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 5px groove #ea5455;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 5px 7px #0002;
+  }
+  .loader:before {
+    content: "";
+    width: 70px;
+    height: 80px;
+    background: #fff;
+    box-shadow: 0 0 10px #0003;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: calc(100% + 6px);
+    animation: loadPaper 4s ease-in infinite;
+  }
+  .loader:after {
+    content: "";
+    width: 70px;
+    height: 80px;
+    background: linear-gradient(to right, #fff 50%, #0000 51%);
+    background-size: 9px 80px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: calc(100% + 6px);
+    animation: disposePaper 4s ease-in infinite;
+  }
+
+  @keyframes loadPaper {
+    0%,
+    10% {
+      height: 80px;
+      bottom: calc(100% + 40px);
+    }
+    50% {
+      height: 80px;
+      bottom: calc(100% + 6px);
+    }
+    75%,
+    100% {
+      height: 0px;
+      bottom: calc(100% + 6px);
+    }
+  }
+
+  @keyframes disposePaper {
+    0%,
+    50% {
+      height: 0px;
+      top: calc(100% + 6px);
+    }
+    75% {
+      height: 80px;
+      top: calc(100% + 6px);
+      opacity: 1;
+    }
+    100% {
+      height: 80px;
+      top: calc(100% + 40px);
+      opacity: 0;
+    }
+  }
+}
+
+.create {
+  .loader {
+    width: 175px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    background-image: radial-gradient(
+        circle 25px at 25px 25px,
+        #fff 100%,
+        transparent 0
+      ),
+      radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0),
+      radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
+      linear-gradient(#fff 50px, transparent 0);
+    background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+    background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .loader::after {
+    content: "";
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0);
+    position: absolute;
+    border: 15px solid transparent;
+    border-bottom-color: $primary-color;
+    box-sizing: border-box;
+    animation: fadePull 1s linear infinite;
+  }
+  .loader::before {
+    content: "";
+    left: 50%;
+    bottom: 15px;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: $primary-color;
+    box-sizing: border-box;
+    animation: fadePull 1s linear infinite;
+  }
+
+  @keyframes fadePull {
+    0% {
+      transform: translate(-50%, 15px);
+      opacity: 0;
+    }
+    50% {
+      transform: translate(-50%, 0px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -15px);
+      opacity: 0;
+    }
+  }
+}
+
+.fetch {
+  .loader {
+    width: 175px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    background-image: radial-gradient(
+        circle 25px at 25px 25px,
+        #fff 100%,
+        transparent 0
+      ),
+      radial-gradient(circle 50px at 50px 50px, #fff 100%, transparent 0),
+      radial-gradient(circle 25px at 25px 25px, #fff 100%, transparent 0),
+      linear-gradient(#fff 50px, transparent 0);
+    background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+    background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .loader::after {
+    content: "";
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 0);
+    position: absolute;
+    border: 15px solid transparent;
+    border-top-color: $primary-color;
+    box-sizing: border-box;
+    animation: fadePush 1s linear infinite;
+  }
+  .loader::before {
+    content: "";
+    left: 50%;
+    bottom: 30px;
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: $primary-color;
+    box-sizing: border-box;
+    animation: fadePush 1s linear infinite;
+  }
+
+  @keyframes fadePush {
+    0% {
+      transform: translate(-50%, -15px);
+      opacity: 0;
+    }
+    50% {
+      transform: translate(-50%, 0px);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, 15px);
+      opacity: 0;
+    }
+  }
+}
+
+.dataTables_wrapper {
+  position: relative;
+  .dataTables_processing {
+    top: 60%;
+    z-index: 999;
+  }
+}
+
+.navigation li a i,
+.navigation li a svg {
+  height: 20px;
+  width: 20px;
+}
+
+.search-list {
+  svg {
+    height: 1.25rem;
+    width: 1.25rem;
+    font-size: 1.25rem;
+    margin-right: 0.75rem !important;
+  }
+}
+.card {
+  .card-header {
+    .card-title {
+      text-transform: capitalize;
+    }
+  }
+}

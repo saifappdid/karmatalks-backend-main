@@ -1,0 +1,151 @@
+$b: #161e31;
+$component-dimension: 180px;
+$timing: 2s;
+$primary-color: mix(#fec50b, #de1058, 0%);
+
+// #custom-loader {
+//   height: 100%;
+//   display: flex;
+//   position: fixed;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   z-index: 99999999;
+//   background: #fff;
+//   // Animation
+//   .loader {
+//     animation: rotate 1s infinite;
+//     height: 50px;
+//     width: 50px;
+//   }
+
+//   .loader:before,
+//   .loader:after {
+//     border-radius: 50%;
+//     content: "";
+//     display: block;
+//     height: 20px;
+//     width: 20px;
+//   }
+//   .loader:before {
+//     animation: ball1 1s infinite;
+//     background-color: #161e31;
+//     box-shadow: 30px 0 0 $primary-color;
+//     margin-bottom: 10px;
+//   }
+//   .loader:after {
+//     animation: ball2 1s infinite;
+//     background-color: $primary-color;
+//     box-shadow: 30px 0 0 #161e31;
+//   }
+
+//   @keyframes rotate {
+//     0% {
+//       transform: rotate(0deg) scale(0.8);
+//     }
+//     50% {
+//       transform: rotate(360deg) scale(1.2);
+//     }
+//     100% {
+//       transform: rotate(720deg) scale(0.8);
+//     }
+//   }
+
+//   @keyframes ball1 {
+//     0% {
+//       box-shadow: 30px 0 0 $primary-color;
+//     }
+//     50% {
+//       box-shadow: 0 0 0 $primary-color;
+//       margin-bottom: 0;
+//       transform: translate(15px, 15px);
+//     }
+//     100% {
+//       box-shadow: 30px 0 0 $primary-color;
+//       margin-bottom: 10px;
+//     }
+//   }
+
+//   @keyframes ball2 {
+//     0% {
+//       box-shadow: 30px 0 0 #161e31;
+//     }
+//     50% {
+//       box-shadow: 0 0 0 #161e31;
+//       margin-top: -20px;
+//       transform: translate(15px, 15px);
+//     }
+//     100% {
+//       box-shadow: 30px 0 0 #161e31;
+//       margin-top: 0;
+//     }
+//   }
+// }
+
+$pulseSize: 6em;
+$pulseTiming: 1.2s;
+
+// body { 
+//   background-color: black; 
+//   text-align: center;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   margin: 0;
+// }
+
+#custom-loader {
+  height: 100%;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 99999999;
+  background: black;
+  opacity: 0.7;
+  // filter: blur(4px);
+  // Animation
+  .loader {
+    width: $pulseSize;
+    height: $pulseSize;
+    border-radius: $pulseSize;
+    background-color: $primary-color;
+    outline: 2px solid transparent;
+    animation: pulseanim $pulseTiming ease-in-out infinite;
+  }
+}
+
+@keyframes pulseanim {
+  0% { transform: scale(0); opacity: 0.8;}
+  100% { transform: scale(1); opacity: 0;}
+}
+
+
+@keyframes ball2-dark {
+  0% {
+    box-shadow: 30px 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
+  }
+}
+.dark-layout {
+  // #custom-loader {
+  //   background-color: #161e31;
+  //   .loader:before {
+  //     background-color: #fff;
+  //   }
+  //   .loader:after {
+  //     animation: ball2-dark 1s infinite;
+  //     box-shadow: 30px 0 0 #fff;
+  //   }
+  // }
+}
