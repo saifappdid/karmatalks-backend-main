@@ -143,6 +143,11 @@ class ChatController extends Controller
             'duration'        => 'required|integer|min:1',
         ]);
         $conversation = InstantConsultationHistory::findOrFail($request->conversation_id);
+        if ($conversation->status == 'ended') {
+            return $this->success([
+                'message' => 'Chat Ended, Please leave the chat',
+            ]);
+        }
         $astro        = Astro::findOrFail($conversation->astro_id);
         $user         = User::findOrFail($conversation->user_id);
 
@@ -257,6 +262,11 @@ class ChatController extends Controller
             'sender_type'     => 'required|in:user,astro',
         ]);
         $conversation = InstantConsultationHistory::findOrFail($request->conversation_id);
+        if ($conversation->status == 'ended') {
+            throw ValidationException::withMessages([
+                'error' => 'Chat is already ended',
+            ]);
+        }
         if ($conversation->status == 'ended') {
             throw new \Exception("Can't chat due to chat ended");
         }
