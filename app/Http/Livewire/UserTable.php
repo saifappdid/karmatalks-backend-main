@@ -157,7 +157,7 @@ class UserTable extends DataTableComponent
 
     public function builder(): Builder
     {
-        $modal = User::query();
+        $modal = User::query()->whereNull('name');
         $modal->with(['country']);
         return $modal;
     }
