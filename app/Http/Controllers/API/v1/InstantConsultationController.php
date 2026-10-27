@@ -279,8 +279,8 @@ class InstantConsultationController extends Controller
                 'currency'           => $this->currency,
             ]);
 
-            $user->wallet = $user->wallet -  $session->session_rate;
-            $user->save();
+            // $user->wallet = $user->wallet -  $session->session_rate;
+            // $user->save();
             
             DB::commit();
 
@@ -350,8 +350,8 @@ class InstantConsultationController extends Controller
         $session->remark   = $request->reason;
         $session->save();
 
-        $user->wallet = $user->wallet - $session->amount;
-        $user->save();
+        // $user->wallet = $user->wallet - $session->amount;
+        // $user->save();
 
         AstroLeadSuggestion::create([
             'user_id'  => $user->id,
