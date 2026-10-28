@@ -25,7 +25,7 @@ class SmsIntegration
         $data_string = json_encode($data);
         $response =  HTTP::withHeaders([
             'Content-Type' => 'application/json',
-        ])->post('http://sms.appdidsms.in/api/send_sms', json_decode($data_string, true));
+        ])->post('http://sms.appdidsms.in/bsp/api/send_sms', json_decode($data_string, true));
         // self::trackOtp($response, $projectName, env('MESSAGE_API_SENDER_ID'));
         return $response;
 
